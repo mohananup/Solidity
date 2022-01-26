@@ -1,12 +1,17 @@
-// contract test code will go here
-import assert from assert;
-import ganache from ganache;
-import Web3 from web3;
+//contract test code will go here
 
+
+// import { assert } from assert;
+// import { ganache } from ganache;
+// import { Web3 } from Web3;
+
+const assert = require('assert');
+const ganache = require('ganache-cli');
+const Web3 = require('web3');
 
 const web3 = new Web3(ganache.provider());
 
-beforeEach(() =>{
+beforeEach(() => {
     //Get a list of all accounts
     web3.eth.getAccounts()
     .then(fetchedAccounts => {
